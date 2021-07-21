@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>點燈-填寫資料</title>
+    <!-- 重置 -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- bootstrap 4.6.0 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <!-- 動畫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- 小圖示 -->
+    <script src="https://kit.fontawesome.com/271f30e909.js" crossorigin="anonymous"></script>
+    <!-- 文字 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- navbar2 -->
+    <link rel="stylesheet" href="./navbar2.css" />
+
+    <style>
+        /* page_1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        /* 基本設定 */
+        
+        body {
+            font-family: "Faustina", serif !important;
+            /* font-family: 'Sitka Display', NSimSun, 'sans-serif'; */
+            /* font-family: 'Noto Sans TC', serif !important; */
+            background-image: url(./img/nav_bcc.png);
+        }
+        
+        h2 {
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        h3 {
+            font-size: 32px;
+            font-weight: normal;
+        }
+        
+        h4 {
+            font-size: 24px;
+            font-weight: normal;
+        }
+        
+        h5 {
+            /* 追加 */
+            letter-spacing: 3px;
+        }
+        
+        p {
+            /* 字級可自訂 */
+            /* font-size: 20px; */
+            font-size: 16px;
+            font-weight: normal;
+            /* 追加 */
+            margin: 0;
+            letter-spacing: 2px;
+            /* font-family: 'Faustina', serif; */
+            /* font-family: 'Noto Sans TC', serif !important; */
+            /* 追加修正 */
+            text-align: justify;
+        }
+        /* 按鈕 */
+        
+        .btns {
+            margin: 300px;
+        }
+        
+        button {
+            padding: 12px 18px;
+            background-color: #cc543a;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            /* font-family: 'Sitka Display', NSimSun, 'sans-serif'; */
+        }
+        
+        button:focus {
+            outline: 0;
+            box-shadow: 0 0 0 1pt rgb(77, 77, 77);
+        }
+        
+        .btnss {
+            padding: 12px 18px;
+            background-color: #cc543a;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            /* font-family: 'Sitka Display', NSimSun, 'sans-serif'; */
+            cursor: pointer;
+        }
+        
+        i {
+            padding: 0 8px;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            color: #cc543a;
+        }
+        /* 麵包屑 */
+        
+        .breadcrumb_style {
+            background-image: url(./img/nav_background_1.png);
+            /* navbar多厚 就推多少paddding */
+        }
+        
+        .breadcrumb_style_1 {
+            padding: 10px 0;
+            align-items: center;
+            margin: auto;
+        }
+        
+        .astlyep {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #707070;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        
+        .breadcrumb_style_1 img {
+            height: 10px;
+            width: 10px;
+            margin: 0 10px;
+        }
+        /* p 特別設定 */
+        
+        p {
+            line-height: 2rem;
+        }
+        
+        .light_Description_page_1 {
+            background-image: url(./img/nav_background_1.png);
+        }
+        
+        .textalign_center {
+            text-align: center;
+        }
+        
+        .light_Description_page_1_title_p p {
+            text-align: center;
+        }
+        
+        .light_Description_page_1_p p {
+            text-align: center;
+        }
+        
+        .light_Description_page_1_p_border {
+            border-bottom: 1px solid #d0d0d0;
+            margin: auto;
+        }
+        
+        .buttonstyle {
+            display: flex;
+            justify-content: space-evenly;
+            flex: 0 0 20%;
+            max-width: 285px;
+            margin: auto;
+        }
+        
+        .light_Description_page_1_backgroundimg {
+            opacity: 0.35;
+            z-index: 1;
+        }
+        
+        .position_relative {
+            position: relative;
+        }
+        
+        .backgroundimg_god {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+        }
+        
+        .backgroundimg_god img {
+            width: 100%;
+        }
+        
+        .redcolor {
+            color: #cc543a;
+        }
+        
+        .overflowhid {
+            overflow: hidden;
+        }
+        
+        .backgroundimg_amulet img {
+            width: 100%;
+        }
+        
+        .backgroundimg_lantern img {
+            width: 100%;
+        }
+        
+        .light_Description_page_1_boxset {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 400px;
+        }
+        
+        .graycolor {
+            background-color: #c0c0c0;
+        }
+        
+        .whitecolor {
+            color: white;
+        }
+        
+        .btnhovw:hover {
+            color: #fff;
+        }
+        /* index_goTop */
+        
+        .index_goTopImg {
+            width: 50px;
+            position: fixed;
+            bottom: -100px;
+            right: 20px;
+            transition: 0.5s;
+            z-index: 9;
+        }
+        
+        .index_goTopImg svg {
+            width: 100%;
+        }
+        
+        .index_goTopImg.show {
+            bottom: 20px;
+        }
+        /* 手機在這邊~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        /* min-width 桌面板 */
+        
+        @media (min-width: 1400px) {
+            .displayno {
+                display: none;
+            }
+            .backgroundimg_amulet {
+                width: 25%;
+                position: absolute;
+                bottom: 20%;
+                opacity: 0.2;
+            }
+            .backgroundimg_lantern {
+                width: 50%;
+                position: absolute;
+                top: -4%;
+                right: 0;
+                opacity: 0.2;
+            }
+            .padtop150 {
+                padding-top: 100px;
+            }
+            .padding_bottom_rem {
+                padding-bottom: 3rem;
+            }
+            .padding_bottom_rem2 {
+                padding-top: 2rem;
+            }
+            .padding_bottom150 {
+                padding-bottom: 150px;
+            }
+            .breadcrumb_style_1 {
+                width: 80%;
+            }
+            /* index_goTop */
+            .index_goTopImg {
+                width: 50px;
+                position: fixed;
+                bottom: -100px;
+                right: 20px;
+                transition: 0.5s;
+                z-index: 9;
+            }
+        }
+        /* 中間版 */
+        
+        @media (min-width: 741px) and (max-width: 1399px) {
+            .displayno {
+                display: none;
+            }
+            .backgroundimg_amulet {
+                width: 25%;
+                position: absolute;
+                bottom: 20%;
+                opacity: 0.2;
+            }
+            .backgroundimg_lantern {
+                width: 50%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                opacity: 0.2;
+            }
+            .padding_bottom_rem {
+                padding-bottom: 3rem;
+            }
+            .padding_bottom_rem2 {
+                padding-top: 2rem;
+            }
+            .padding_bottom150 {
+                padding-bottom: 150px;
+            }
+            .breadcrumb_style_1 {
+                width: 85%;
+            }
+        }
+        /* max-width 手機板 */
+        
+        @media (max-width: 740px) {
+            .breadcrumb_style_1 {
+                /* contanier架構專用 padding 0 15px  */
+                padding: 20px 15px;
+                width: 100%;
+            }
+            .backgroundimg_lantern {
+                width: 100%;
+                position: absolute;
+                top: -9%;
+                right: 0;
+                opacity: 0.2;
+            }
+            .backgroundimg_amulet {
+                width: 70%;
+                position: absolute;
+                bottom: 13%;
+                opacity: 0.2;
+            }
+            .displayno_md {
+                display: none;
+            }
+            .padding_bottom_rem {
+                padding-bottom: 1rem;
+            }
+            .padding_bottom_rem2 {
+                padding-top: 1rem;
+            }
+            .fontp_md {
+                font-size: 12px;
+            }
+            .padding_bottom150 {
+                padding-bottom: 1rem;
+            }
+            .padtp13 {
+                padding-top: 2%;
+            }
+            .breadcrumb_style_1 {
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <div class="nav_burgurBar">
+        <div class="nav_burgurBar_img">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20">
+          <g
+            id="Group_135"
+            data-name="Group 135"
+            transform="translate(-341.5 -1313.5)"
+          >
+            <line
+              id="Line_50"
+              data-name="Line 50"
+              x2="23"
+              transform="translate(342.5 1314.5)"
+              fill="none"
+              stroke="#707070"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <line
+              id="Line_51"
+              data-name="Line 51"
+              x2="23"
+              transform="translate(342.5 1323.5)"
+              fill="none"
+              stroke="#707070"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <line
+              id="Line_52"
+              data-name="Line 52"
+              x2="23"
+              transform="translate(342.5 1332.5)"
+              fill="none"
+              stroke="#707070"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        </div>
+
+        <div class="nav_logo_mobile">
+            <img src="./img/nav_logo_mobile.svg" alt="" />
+        </div>
+    </div>
+
+    <div class="nav_overlayNav">
+        <div class="nav_closeBtn mb-4">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
+          <title>close</title>
+          <path
+            fill="#fff"
+            d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+          ></path>
+        </svg>
+        </div>
+        <div class="nav_overlayNavBox">
+            <ul>
+                <a href="">
+                    <li>最新消息</li>
+                </a>
+                <a href="">
+                    <li>探索灣廟</li>
+                </a>
+                <li class="nav_ser_mobile">
+                    線上服務
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <ul class="nav_dropDownMenu_mobile">
+                    <a class="dropdown-item nav_ser_item_mob">祈福點燈</a>
+                    <a class="dropdown-item nav_ser_item_mob">求神問卜</a>
+                </ul>
+                <a href="">
+                    <li>聖地行旅</li>
+                </a>
+                <a href="">
+                    <li>祈福商店</li>
+                </a>
+                <a href="">
+                    <li>購物車</li>
+                </a>
+                <a href="" data-toggle="modal" data-target="#loginCenter">
+                    <li>登入 | 註冊</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 電腦螢幕大小的navbar -->
+    <nav class="nav_navbar_com">
+        <div class="nav_navbar_com_container">
+            <!-- 請依檔案位置修改logo路徑 -->
+            <img src="./img/nav_logo.svg" />
+
+            <div class="nav_navbar">
+                <div class="nav_navbarBox">
+                    <div class="nav_nav_left">
+                        <a href="" class="nav_navbar_item">
+                            <div class="nav_hide_ch">最新消息</div>
+                            <div class="nav_hide_en">NEWS</div>
+                        </a>
+                        <a href="" class="nav_navbar_item">
+                            <div class="nav_hide_ch">探索灣廟</div>
+                            <div class="nav_hide_en">EXPLORE</div>
+                        </a>
+                        <a href="#" class="nav_navbar_item nav_ser">
+                            <div class="nav_hide_ch">線上服務</div>
+                            <div class="nav_hide_en">SERVICE</div>
+
+                            <ul class="nav_dropDownMenu">
+                                <a class="dropdown-item nav_ser_item" href="./light_Fill_in_theinformation_nophp.html">祈福點燈</a
+                  >
+                  <a
+                    class="dropdown-item nav_ser_item"
+                    href="./light_Fill_in_theinformation_nophp.html"
+                    >求神問卜</a
+                  >
+                </ul>
+              </a>
+
+                                <a href="" class="nav_navbar_item">
+                                    <div class="nav_hide_ch">聖地行旅</div>
+                                    <div class="nav_hide_en">TRIP</div>
+                                </a>
+                                <a href="" class="nav_navbar_item">
+                                    <div class="nav_hide_ch">祈福商店</div>
+                                    <div class="nav_hide_en">SHOP</div>
+                                </a>
+                                <a href="" class="nav_navbar_item">
+                                    <div class="nav_hide_ch">購物車</div>
+                                    <div class="nav_hide_en">CART</div>
+                                </a>
+                    </div>
+                    <div class="nav_nav_right">
+                        <a href="" data-toggle="modal" data-target="#loginCenter" class="nav_navbar_item">
+                            <div>登入</div>
+                        </a>
+                        <span class="nav_navbar_item">|</span>
+                        <a href="" data-toggle="modal" data-target="#registerCenter" class="nav_navbar_item">
+                            <div>註冊</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="nav_navline" />
+    </nav>
+
+    <!-- login -->
+    <div class="modal fade" id="loginCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-content-re">
+                <div class="modal-header modal-header-re">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">
+                        登入 | LOGIN
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <form class="mt-3">
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control form-control-re" id="account-name" placeholder="Email" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-re" id="password-text" placeholder="Password" />
+                        </div>
+                        <input type="checkbox" /> 記住帳號
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-re">
+                    <button type="button" class="btn btn-primary btn-primary-re">
+              登入
+            </button>
+                </div>
+                <div class="modal-footer2-re mt-3">
+                    <a class="mr-5" data-toggle="modal" data-target="#lostPassword" id="passwordbtn">忘記密碼</a
+            >
+            <a
+              data-toggle="modal"
+              data-target="#registerCenter"
+              id="registerbtn"
+              >註冊帳號</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- lost password -->
+    <div
+      class="modal fade"
+      id="lostPassword"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content-re">
+          <div class="modal-header modal-header-re">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title" id="exampleModalCenterTitle">找回密碼</h5>
+          </div>
+          <div class="modal-body">
+            <form class="mt-3">
+              <div class="form-group mb-3">
+                <p>
+                  請輸入您註冊的電子郵件，您將會在電子郵件信箱中收到重設密碼的連結。
+                </p>
+                <input
+                  type="text"
+                  class="form-control form-control-re"
+                  id="account-name"
+                  placeholder="Email"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer modal-footer-re">
+            <button type="button" class="btn btn-primary btn-primary-re">
+              送出
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- register -->
+    <div
+      class="modal fade"
+      id="registerCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content-re">
+          <div class="modal-header modal-header-re">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              註冊 | REGISTER
+            </h5>
+          </div>
+          <div class="modal-body">
+            <form class="mt-3">
+              <div class="form-group mb-3">
+                <input
+                  type="text"
+                  class="form-control form-control-re"
+                  id="account-name"
+                  placeholder="User Name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <input
+                  type="text"
+                  class="form-control form-control-re"
+                  id="account-name"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control form-control-re"
+                  id="password-text"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control form-control-re"
+                  id="password-text"
+                  placeholder="Repeat Password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer modal-footer-re">
+            <button type="button" class="btn btn-primary btn-primary-re">
+              註冊
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 我是麵包屑-->
+    <div class="breadcrumb_style backgroundimg_1">
+      <div class="d-flex flex-wrap breadcrumb_style_1">
+        <a href="" class="astlyep">首頁</a>
+                    <!-- 共用雲端找箭頭icon-->
+                    <img src="./img/nav_arrow_right.svg" />
+                    <a href="./light_Introduction_nophp.html" class="astlyep">燈種介紹</a>
+                    <img src="./img/nav_arrow_right.svg" />
+                    <a href="./light_Description_nophp.html" class="astlyep">服務說明</a>
+                </div>
+            </div>
+
+            <!-- page_1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <div class="light_Description_page_1 position_relative padtop150">
+                <!-- 我是 燈籠圖 -->
+                <div class="light_Description_page_1_backgroundimg backgroundimg_lantern">
+                    <img src="./img/light_lantern_01.png" />
+                </div>
+
+                <!-- page_1 桌機 內容集合 -->
+                <div class="light_Description_page_1_set container displayno_md">
+                    <!-- page_1文字集合 -->
+                    <div class="light_Description_page_1_textset">
+                        <!-- page_1上面大標題+敘述 -->
+                        <div class="light_Description_page_1_title padding_bottom_rem">
+                            <div class="
+                light_Description_page_1_title_h
+                textalign_center
+                padding_bottom_rem
+              ">
+                                <h3>線上點燈-服務說明</h3>
+                            </div>
+                            <div class="light_Description_page_1_title_p textalign_center">
+                                <p>
+                                    本服務同現場點燈，皆遵循傳統習俗，於各廳堂廟宇內舉行正式儀式，為信眾完成安奉作業，以免除信眾舟車勞頓之苦。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- page_1內文 祈福燈種 -->
+                    <div class="light_Description_page_1_h5p padding_bottom_rem">
+                        <h5 class="redcolor">祈福燈種:</h5>
+                        <br />
+                        <p>
+                            祈福燈種包括 (1)安太歲、(2)光明燈、(3)文昌燈、(4)發財燈、(5)姻緣燈、(6)平安燈。
+                        </p>
+                    </div>
+                    <!-- page_1內文 安奉費用 -->
+                    <div class="light_Description_page_1_h5p padding_bottom_rem">
+                        <h5 class="redcolor">安奉費用:</h5>
+                        <br />
+                        <p>每盞燈安奉費用為600元，各項服務特色請參考本網站相關說明。</p>
+                    </div>
+                    <!-- page_1內文 付費方式 -->
+                    <div class="light_Description_page_1_h5p padding_bottom_rem">
+                        <h5 class="redcolor">付費方式:</h5>
+                        <br />
+                        <p>
+                            (1) 線上刷卡(VISA信用卡、銀聯卡、美國運通卡) <br />(2) 7-ELEVEN門市 ibon代碼繳費 <br />(3) 中國信託紅利兌換 <br />(4) 新光銀行線上轉帳
+                            <br />(5) 全家 FamiPort代碼繳費
+                        </p>
+                        <p>※ 依活動內容不同可選用付費方式將有變動。</p>
+                    </div>
+                    <!-- page_1內文 申請流程 -->
+                    <div class="light_Description_page_1_h5p padding_bottom_rem">
+                        <h5 class="redcolor">申請流程:</h5>
+                        <br />
+                        <p>
+                            (1)依步驟填寫相關資料以供廟方進行資料確認及安奉作業。 <br /> (2)完成申請作業後，系統即提供一組訂單編號，供信眾查詢用。 <br /> (3)廟方將於收到申請資料後15天內完成安奉作業並以平信寄送通知函與贈品予民眾。
+                            <br /> (4)欲寄送國外者請填寫英文地址，並將依寄送區域酌收寄送郵資。
+                        </p>
+                    </div>
+
+                    <!-- 我是 護身符圖 -->
+                    <div class="light_Description_page_1_backgroundimg backgroundimg_amulet">
+                        <img src="./img/light_amulet_01.png" />
+                    </div>
+
+                    <!-- page_1內文 其他須知 -->
+                    <div class="light_Description_page_1_h5p padding_bottom_rem">
+                        <h5 class="redcolor">其他須知:</h5>
+                        <br />
+                        <p>
+                            (1)填寫國曆生辰者將由廟方轉為農曆生辰進行安奉。 <br /> (2)本年度線上點燈之贈品為平安符，感謝狀及贈品將依申請人所填寫之寄送地址寄送。
+                            <br /> (3)若因申請人未提供正確寄送地址而無法送達物品，廟方將不負責查詢地址、重新寄發或其他相關事務。
+                            <br /> (4)農曆年前之訂單，需至該年度農曆正月15日前，由廟方擇良辰吉日完成該年度第一次安奉作業。
+                            <br /> (5)本年度申請之各燈種請將統一於農曆12月24日送神後拆除。 <br /> (6)透過線上點燈之民眾不得要求將本年度之贈品折換現金、兌換券或其他物品。
+                            <br /> (7)本服務說明與贈品得由天后宮於各年度視情況而調整。
+                        </p>
+                    </div>
+                    <!-- page_1內文 底部 -->
+                    <!-- page_1內文 底部線 -->
+                    <div class="light_Description_page_1_p_border col-8 padding_bottom_rem"></div>
+                    <!-- page_1內文 底部P -->
+                    <div class="
+            light_Description_page_1_p
+            padding_bottom_rem
+            textalign_center
+            padding_bottom_rem2
+          ">
+                        <p>
+                            當您點選下方「同意」按鈕時，則表示您已閱讀並同意「隱私權政策」聲明。
+                        </p>
+                    </div>
+
+                    <div class="light_Description_page_1_button buttonstyle padding_bottom150">
+                        <a href="./light_Introduction_nophp.html" class="whitecolor btnhovw">
+                            <button class="graycolor">
+              <p>不同意</p>
+            </button>
+                        </a>
+
+                        <a href="./light_Fill_in_theinformation_nophp.html" class="whitecolor btnhovw">
+                            <button>
+              <p>同意</p>
+            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- page_1 手機用 內容集合 -->
+                <div class="light_Description_page_1_set container displayno padtp13">
+                    <!-- page_1 手機用 上面大標題 -->
+
+                    <div class="
+            light_Description_page_1_title_h
+            textalign_center
+            padding_bottom_rem
+          ">
+                        <h3>線上點燈-服務說明</h3>
+                    </div>
+
+                    <!-- page_1 手機用 內文集合 -->
+
+                    <div class="light_Description_page_1_boxset">
+                        <div class="
+              light_Description_page_1_title_p
+              textalign_center
+              padding_bottom_rem
+            ">
+                            <p>
+                                本服務同現場點燈，皆遵循傳統習俗，於各廳堂廟宇內舉行正式儀式，為信眾完成安奉作業，以免除信眾舟車勞頓之苦。
+                            </p>
+                        </div>
+
+                        <!-- page_1 手機用 內文 祈福燈種 -->
+                        <div class="light_Description_page_1_h5p padding_bottom_rem">
+                            <h5 class="redcolor">祈福燈種:</h5>
+                            <br />
+                            <p>
+                                祈福燈種包括 (1)安太歲、(2)光明燈、(3)文昌燈、(4)發財燈、(5)姻緣燈、(6)平安燈。
+                            </p>
+                        </div>
+                        <!-- page_1 手機用 內文 安奉費用 -->
+                        <div class="light_Description_page_1_h5p padding_bottom_rem">
+                            <h5 class="redcolor">安奉費用:</h5>
+                            <br />
+                            <p>
+                                安太歲為每盞800元，其餘燈種每盞燈安奉費用為600元，各項服務特色請參考本網站相關說明。
+                            </p>
+                        </div>
+                        <!-- page_1手機用 內文 付費方式 -->
+                        <div class="light_Description_page_1_h5p padding_bottom_rem">
+                            <h5 class="redcolor">付費方式:</h5>
+                            <br />
+                            <p>
+                                (1) 線上刷卡(VISA信用卡、銀聯卡、美國運通卡) <br />(2) 7-ELEVEN門市 ibon代碼繳費 <br />(3) 中國信託紅利兌換 <br />(4) 新光銀行線上轉帳 <br />(5) 全家 FamiPort代碼繳費
+                            </p>
+                            <p>※ 依活動內容不同可選用付費方式將有變動。</p>
+                        </div>
+                        <!-- page_1 手機用 內文 申請流程 -->
+                        <div class="light_Description_page_1_h5p padding_bottom_rem">
+                            <h5 class="redcolor">申請流程:</h5>
+                            <br />
+                            <p>
+                                (1)依步驟填寫相關資料以供廟方進行資料確認及安奉作業。 <br /> (2)完成申請作業後，系統即提供一組訂單編號，供信眾查詢用。 <br /> (3)廟方將於收到申請資料後15天內完成安奉作業並以平信寄送通知函與贈品予民眾。
+                                <br /> (4)欲寄送國外者請填寫英文地址，並將依寄送區域酌收寄送郵資。
+                            </p>
+                        </div>
+
+                        <!-- 我是 手機用 護身符圖 -->
+                        <!-- <div class="light_Description_page_1_backgroundimg  backgroundimg_amulet ">
+                    <img src="./img/deco/amulet_01.png">
+                </div> -->
+
+                        <!-- page_1內文 手機用 其他須知 -->
+                        <div class="light_Description_page_1_h5p padding_bottom_rem">
+                            <h5 class="redcolor">其他須知:</h5>
+                            <br />
+                            <p>
+                                (1)填寫國曆生辰者將由廟方轉為農曆生辰進行安奉。 <br /> (2)本年度線上點燈之贈品為平安符，感謝狀及贈品將依申請人所填寫之寄送地址寄送。
+                                <br /> (3)若因申請人未提供正確寄送地址而無法送達物品，廟方將不負責查詢地址、重新寄發或其他相關事務。
+                                <br /> (4)農曆年前之訂單，需至該年度農曆正月15日前，由廟方擇良辰吉日完成該年度第一次安奉作業。
+                                <br /> (5)本年度申請之各燈種請將統一於農曆12月24日送神後拆除。 <br /> (6)透過線上點燈之民眾不得要求將本年度之贈品折換現金、兌換券或其他物品。
+                                <br /> (7)本服務說明與贈品得由天后宮於各年度視情況而調整。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- page_1 手機用 內文 底部線 -->
+                    <div class="light_Description_page_1_p_border col-lg-8 padding_bottom_rem"></div>
+                    <!-- page_1 手機用 內文 底部P -->
+                    <div class="
+            light_Description_page_1_p
+            padding_bottom_rem
+            textalign_center
+            padding_bottom_rem2
+          ">
+                        <!-- <p class="fontp_md">已詳細閱讀上述說明並同意「隱私權政策」</p> -->
+                        <div class="form-check">
+                            <label class="form-check-label" for="defaultCheck1">
+              已詳細閱讀上述說明並同意「隱私權政策」
+            </label>
+                        </div>
+                    </div>
+
+                    <div class="light_Description_page_1_button buttonstyle padding_bottom150">
+                        <a href="./light_Introduction_nophp.html" class="whitecolor btnhovw">
+                            <button class="graycolor">
+              <p>不同意</p>
+            </button>
+                        </a>
+
+                        <a href="./light_Fill_in_theinformation_nophp.html" class="whitecolor btnhovw">
+                            <button>
+              <p>同意</p>
+            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer是我~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <footer>
+                <p>Copyright© TempleTrip.tw</p>
+            </footer>
+
+            <!-- Js  相關設定~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- jquery3.5.1 -->
+            <!-- jquery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <!-- bootstrap4.6.0 -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="https://unpkg.com/moment-lunar@0.0.4/moment-lunar.min.js"></script>
+            <script>
+                const lunarDate = moment()
+                    .year(2021)
+                    .month(2)
+                    .date(24)
+                    .lunar()
+                    .format("YYYY-MM-DD");
+                const solarDate = moment()
+                    .year(2017)
+                    .month(0)
+                    .date(1)
+                    .solar()
+                    .format("YYYY-MM-DD");
+
+                console.log(lunarDate);
+                console.log(solarDate);
+            </script>
+
+            <script>
+                // Go-Top
+
+                $(window).scroll(function(event) {
+                    let scrollTop = $(window).scrollTop();
+                    console.log(scrollTop);
+
+                    if (scrollTop >= 500) {
+                        $(".index_goTopImg").addClass("show");
+                    } else {
+                        $(".index_goTopImg").removeClass("show");
+                    }
+                });
+
+                $(".index_goTopImg").click(function() {
+                    $("html,body").animate({
+                            scrollTop: 0,
+                        },
+                        700
+                    );
+                });
+            </script>
+</body>
+
+</html>
