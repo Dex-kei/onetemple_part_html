@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 /* burgurBar */
 
 .nav_burgurBar {
-    background-image: url(../img/nav_bcc.png);
+    background-image: url(./img/nav_bcc.png);
     position: sticky;
     top: 0;
     display: none;
@@ -107,7 +107,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav_index_navbar_com {
     width: 100%;
-    background-image: url(../img/nav_barBcc.jpg);
+    background-image: url(./img/nav_barBcc.jpg);
     /* padding: 40px 0; */
     position: sticky;
     top: 0px;
@@ -249,7 +249,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     top: 80%;
     left: 31%;
-    background-image: url(../img/nav_bcc2.png);
+    background-image: url(./img/nav_bcc2.png);
     border: 1px solid #ddd;
     box-shadow: 0.5px 0.5px 5px 1px rgba(0, 0, 0, 0.1);
     display: none;
@@ -265,7 +265,7 @@ body::-webkit-scrollbar-thumb {
 /* login */
 
 .modal-content-re {
-    background-image: url(../img/nav_bcc2.png);
+    background-image: url(./img/nav_bcc2.png);
     border: 0;
     border-radius: 20px;
     padding: 30px;
@@ -293,7 +293,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .form-control-re {
-    background-image: url(../img/nav_bcc.png);
+    background-image: url(./img/nav_bcc.png);
     border-radius: 0%;
     border: 1px solid #cdcdcd;
 }
